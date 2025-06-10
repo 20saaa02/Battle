@@ -1,0 +1,4 @@
+cd Battle
+conda activate ts_env
+pip install --default-timeout=100 -r requirements.txt
+python main.py --input data/example.csv --horizon 10 --models arima,holt,prophet,tbats,ensemble

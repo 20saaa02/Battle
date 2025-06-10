@@ -8,7 +8,7 @@ from models.ensemble_model import ensemble_forecast
 from utils.preprocessing import preprocess_series
 
 def main():
-    i = 0
+    i = 2
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', type=str, required=True, help='Path to input CSV')
     parser.add_argument('--horizon', type=int, required=True, help='Forecast horizon')

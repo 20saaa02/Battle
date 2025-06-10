@@ -8,6 +8,7 @@ from models.ensemble_model import ensemble_forecast
 from utils.preprocessing import preprocess_series
 
 def main():
+    i = 0
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', type=str, required=True, help='Path to input CSV')
     parser.add_argument('--horizon', type=int, required=True, help='Forecast horizon')
@@ -56,7 +57,7 @@ def main():
 
 
     forecast_df = pd.DataFrame(forecasts)
-    forecast_df.to_csv('forecast.csv', index=False)
+    forecast_df.to_csv(f'forecast{i}.csv', index=False)
     print("✅ Forecast saved to forecast.csv")
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ def prophet_forecast(series, horizon):
     daily_seasonality=False)
     model.add_seasonality(
     name='custom_season',
-    period=12,             # сезонность (например, 12 месяцев)
+    period=7,             # сезонность (например, 12 месяцев)
     fourier_order=5)
     model.fit(df)
     future = model.make_future_dataframe(periods=horizon, freq='D')
